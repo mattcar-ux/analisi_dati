@@ -31,7 +31,7 @@ for tm_dict in tutti_tm_dicts:
 
 time_generated = str(tutti_tm["metadata"]["generated"])
 time_generated = time_generated[:-3]
-dt = datetime.fromtimestamp(int(time_generated))
+dt = datetime.fromtimestamp(int(time_generated)) # conversione in stringa data
 titolo_figura = tutti_tm["metadata"]["title"]
 fig = px.scatter_geo(lat=latitudini, lon=longitudini, size=mags,
                      title=f"{titolo_figura}, generated on {dt}",
